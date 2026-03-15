@@ -1,0 +1,27 @@
+Level 2: Applying
+Define Functions with Default Arguments in Python
+Define a function with default argument values.
+Use *args and **kwargs in Python Functions
+Define a function with variable positional arguments (*args) and variable keyword arguments (**kwargs).
+Use List Comprehension in Python
+Use list comprehension to create new lists efficiently.
+Use Built-In Functions in Python Loops
+Use built-in functions inside loops to enhance functionality and efficiency.
+Use Generator Expressions in Python
+Use generator expressions to create iterators for memory efficiency.
+Choose Lists, Dicts, or Sets in Python
+Choose lists, dictionaries, and sets based on performance implications for common operations.
+Access and Modify Python Object Attributes
+Access and modify instance variables via object attributes.
+Use Static Variables and Class Methods in Python
+Use static variables and class functions.
+Handle Mutability and Object References in Python
+Apply object references and mutability best practices when writing code.
+Store and Retrieve Data with Python Objects
+Use class instances to store and retrieve data.
+Import Python Built-In Libraries
+Import a built-in library.
+Use Virtual Environments and Pip in Python
+Create and activate a virtual environment, and install and import external libraries using pip. Implement and manage the installation of Python dependencies using `requirements.txt`, and manage dependencies using virtual environments and tools like pipenv or poetry.
+Debug Python Code with Print Statements and Tools
+Use print statements and debugging tools to identify and fix errors.

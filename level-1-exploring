@@ -1,0 +1,30 @@
+Level 1: Exploring
+
+Working with Variables and Numerical Data
+Write simple scripts that use variables to store, reassign, and perform arithmetic operations on integer and floating-point numbers to solve a problem.
+Working with Strings and Output
+Write Python scripts that construct dynamic text using f-strings, manipulate text with basic string methods, and display the formatted results to the console using the print() function.
+Work With Lists in Python
+Create, modify and retrieve data from lists.
+Work With Tuples in Python
+Create, modify, and retrieve data from tuples
+Work with Dictionaries in Python
+Create, modify, and retrieve data from dictionaries
+Get User Input With Python's input()
+Get input from the user using input().
+Use if Statements in Python
+Control program flow with if statements.
+Use Boolean Operators in Python
+Use boolean operators (and, or, not).
+Use for Loops in Python
+Control program flow with for loops.
+Use While Loops in Python
+Control program flow with while loops.
+Write Functions with Conditionals or Loops in Python
+Write and call a function that contains a conditional or a loop.
+Define a Python Class
+Define a class with an __init__ function.
+Instantiate Objects in Python
+Instantiate an object from a class.
+Read and Write Text Files in Python
+Read and write to text files.

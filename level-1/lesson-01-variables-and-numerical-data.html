@@ -1,0 +1,942 @@
+<!DOCTYPE html><html><head>
+      <title>lesson-01-variables-and-numerical-data</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\svara\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="️-level-1--exploring--lesson-1-working-with-variables-and-numerical-data">🏛️ Level 1 – Exploring | Lesson 1: Working with Variables and Numerical Data </h1>
+<h2 id="your-first-day-at-pearson-specter-litt"><em>"Your First Day at Pearson Specter Litt"</em> </h2>
+<blockquote>
+<p><strong>O'Reilly Skill Objective:</strong> <em>Write simple scripts that use variables to store, reassign, and perform arithmetic operations on integer and floating-point numbers to solve a problem.</em></p>
+</blockquote>
+<hr>
+<h2 id="-table-of-contents">📖 Table of Contents </h2>
+<ol>
+<li><a href="#1--opening-scene">Opening Scene</a></li>
+<li><a href="#2--concept-introduction--harvey-specter">Concept Introduction – Harvey Specter</a></li>
+<li><a href="#3--technical-breakdown--mike-ross">Technical Breakdown – Mike Ross</a></li>
+<li><a href="#4--edge-cases--pitfalls--louis-litt">Edge Cases &amp; Pitfalls – Louis Litt</a></li>
+<li><a href="#5--mental-model--donna-paulsen">Mental Model – Donna Paulsen</a></li>
+<li><a href="#6--practice-exercises--rachel-zane">Practice Exercises – Rachel Zane</a></li>
+<li><a href="#7--debugging-scenario">Debugging Scenario</a></li>
+<li><a href="#8--real-world-application">Real-World Application</a></li>
+<li><a href="#9--knowledge-check">Knowledge Check</a></li>
+</ol>
+<hr>
+<h2 id="1--opening-scene">1. 🎬 Opening Scene </h2>
+<p><em>It's 8:47 AM. The elevator doors open on the 50th floor of Pearson Specter Litt. You walk out clutching your laptop bag, heart pounding. The reception desk gleams under recessed lighting. Donna looks up from her desk with a knowing smile.</em></p>
+<p><strong>Donna:</strong> "You must be the new associate. Harvey's been expecting you. Well… <em>I've</em> been expecting you. Harvey doesn't expect— he demands."</p>
+<p><em>She points toward the corner office with the floor-to-ceiling windows overlooking Manhattan.</em></p>
+<p><em>You enter Harvey's office. He's standing at the window, not looking at you.</em></p>
+<p><strong>Harvey:</strong> "Sit down."</p>
+<p><em>You sit. He turns around.</em></p>
+<p><strong>Harvey:</strong> "Let me tell you something they didn't teach you in school. This firm doesn't just win cases anymore. We win <em>with data</em>. The partners who survive the next decade will be the ones who can automate, analyze, and optimize. That's why you're here."</p>
+<p><em>He slides a tablet across his desk. On it: a spreadsheet filled with numbers — client billable hours, revenue breakdowns, case costs.</em></p>
+<p><strong>Harvey:</strong> "Jessica wants a report by end of day. She wants to know which clients are profitable and which are bleeding us dry. That spreadsheet? It's a mess. Your job is to write a Python script that calculates profit margins for each client."</p>
+<p><em>You stare at the data. Hundreds of rows.</em></p>
+<p><strong>Harvey:</strong> "Don't look at me like that. You're not going to do this manually. That's what <em>amateurs</em> do."</p>
+<p><em>He picks up the phone.</em></p>
+<p><strong>Harvey:</strong> "Mike. My office. Now."</p>
+<p><em>Mike Ross walks in, holding a coffee.</em></p>
+<p><strong>Harvey:</strong> "Teach our new associate how to use variables and numbers in Python. They've got until 5 PM."</p>
+<p><em>Mike grins at you.</em></p>
+<p><strong>Mike:</strong> "Alright, rookie. Let's start from the very beginning. And I mean the <em>very</em> beginning."</p>
+<hr>
+<h2 id="2--concept-introduction--harvey-specter">2. 🎯 Concept Introduction — Harvey Specter </h2>
+<p><em>Harvey leans back in his chair.</em></p>
+<p><strong>Harvey:</strong> "Before Mike starts with the technical stuff, let me tell you <em>why</em> this matters."</p>
+<p><strong>Harvey:</strong> "Every program you'll ever write does one thing at its core — it <strong>stores information</strong> and <strong>manipulates it</strong>. That's it. A billion-dollar trading algorithm? Variables and math. A self-driving car? Variables and math. Netflix's recommendation engine? Variables and math."</p>
+<p><strong>Harvey:</strong> "Variables are the <strong>foundation of every program ever written</strong>. If you don't understand variables, you don't understand programming. Period."</p>
+<p><strong>Harvey:</strong> "Think of it this way — in a legal case, you need to track facts: who did what, when, how much was involved. You write those facts down. You reference them later. You update them when new evidence comes in. Variables do the <strong>exact same thing</strong> for code."</p>
+<p><strong>Harvey:</strong> "And numbers? Numbers are how you measure <em>winning</em>. Revenue, margins, performance metrics, response times — everything that matters in this firm, in this <em>world</em>, is quantified."</p>
+<p><strong>Harvey:</strong> "So pay attention. Because if you can't handle variables and numbers, you can't handle anything I'm going to throw at you."</p>
+<hr>
+<h2 id="3--technical-breakdown--mike-ross">3. 🔧 Technical Breakdown — Mike Ross </h2>
+<p><em>Mike pulls up a chair and opens a laptop.</em></p>
+<p><strong>Mike:</strong> "Alright, let's build this from the ground up. No shortcuts."</p>
+<hr>
+<h3 id="31-what-is-a-variable">3.1 What Is a Variable? </h3>
+<p><strong>Mike:</strong> "A <strong>variable</strong> is a <strong>name</strong> that refers to a <strong>value</strong> stored in your computer's memory. You create a variable by assigning a value to a name using the <code>=</code> sign."</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Creating your first variable</span>
+client_name <span class="token operator">=</span> <span class="token string">"Pearson Specter Litt"</span>
+</code></pre><p><strong>Mike:</strong> "Here's what just happened, line by line:"</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_name</code></td>
+<td>The <strong>name</strong> (label) you chose for this variable</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>The <strong>assignment operator</strong> — it means 'store this value'</td>
+</tr>
+<tr>
+<td><code>"Pearson Specter Litt"</code></td>
+<td>The <strong>value</strong> being stored (a string of text)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mike:</strong> "But today we're focusing on <strong>numbers</strong>, not text. Let's get into that."</p>
+<hr>
+<h3 id="32-numerical-data-types-integers-and-floats">3.2 Numerical Data Types: Integers and Floats </h3>
+<p><strong>Mike:</strong> "Python has two core number types you need to know:"</p>
+<h4 id="integers-int--whole-numbers-no-decimal-point"><strong>Integers (<code>int</code>)</strong> — Whole numbers, no decimal point </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>billable_hours <span class="token operator">=</span> <span class="token number">120</span>
+total_cases <span class="token operator">=</span> <span class="token number">47</span>
+year_founded <span class="token operator">=</span> <span class="token number">2005</span>
+negative_balance <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5000</span>
+</code></pre><p><strong>Mike:</strong> "Integers are <strong>exact</strong>. No rounding, no approximation. When you need to count things — cases, clients, years — you use integers."</p>
+<h4 id="floats-float--numbers-with-decimal-points"><strong>Floats (<code>float</code>)</strong> — Numbers with decimal points </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>hourly_rate <span class="token operator">=</span> <span class="token number">450.75</span>
+tax_rate <span class="token operator">=</span> <span class="token number">0.08</span>
+pi <span class="token operator">=</span> <span class="token number">3.14159</span>
+</code></pre><p><strong>Mike:</strong> "Floats represent <strong>real numbers</strong> — anything that needs precision beyond whole numbers. Hourly rates, percentages, measurements."</p>
+<h4 id="how-to-check-the-type-of-a-variable">How to check the type of a variable </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>billable_hours <span class="token operator">=</span> <span class="token number">120</span>
+hourly_rate <span class="token operator">=</span> <span class="token number">450.75</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>billable_hours<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># &lt;class 'int'&gt;</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>hourly_rate<span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># &lt;class 'float'&gt;</span>
+</code></pre><p><strong>Mike:</strong> "The <code>type()</code> function tells you <em>exactly</em> what kind of data you're working with. You'll use this constantly when debugging."</p>
+<hr>
+<h3 id="33-variable-naming-rules">3.3 Variable Naming Rules </h3>
+<p><strong>Mike:</strong> "Python has strict rules about what you can name a variable:"</p>
+<h4 id="-valid-names">✅ Valid Names </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>client_revenue <span class="token operator">=</span> <span class="token number">50000</span>       <span class="token comment"># snake_case (Python standard)</span>
+totalCases <span class="token operator">=</span> <span class="token number">47</span>              <span class="token comment"># camelCase (works, but not Pythonic)</span>
+_private_data <span class="token operator">=</span> <span class="token string">"secret"</span>     <span class="token comment"># leading underscore (convention for internal use)</span>
+case2024 <span class="token operator">=</span> <span class="token string">"ongoing"</span>         <span class="token comment"># numbers allowed (not at the start)</span>
+FIRM_NAME <span class="token operator">=</span> <span class="token string">"PSL"</span>            <span class="token comment"># ALL_CAPS (convention for constants)</span>
+</code></pre><h4 id="-invalid-names">❌ Invalid Names </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>2024case <span class="token operator">=</span> <span class="token string">"error"</span>           <span class="token comment"># ❌ Cannot start with a number</span>
+client<span class="token operator">-</span>name <span class="token operator">=</span> <span class="token string">"error"</span>        <span class="token comment"># ❌ Hyphens not allowed (Python thinks it's subtraction)</span>
+<span class="token keyword keyword-class">class</span> <span class="token operator">=</span> <span class="token string">"error"</span>              <span class="token comment"># ❌ 'class' is a reserved keyword</span>
+my variable <span class="token operator">=</span> <span class="token string">"error"</span>        <span class="token comment"># ❌ Spaces not allowed</span>
+</code></pre><p><strong>Mike:</strong> "Python convention — and this firm's standard — is <strong>snake_case</strong>. Words separated by underscores, all lowercase. It's clean, it's readable, it's professional."</p>
+<hr>
+<h3 id="34-assignment-and-reassignment">3.4 Assignment and Reassignment </h3>
+<p><strong>Mike:</strong> "Variables are called 'variables' because their values can <strong>vary</strong> — they can change."</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Initial assignment</span>
+client_revenue <span class="token operator">=</span> <span class="token number">50000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>client_revenue<span class="token punctuation">)</span>        <span class="token comment"># Output: 50000</span>
+
+<span class="token comment"># Reassignment — the old value is gone</span>
+client_revenue <span class="token operator">=</span> <span class="token number">75000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>client_revenue<span class="token punctuation">)</span>        <span class="token comment"># Output: 75000</span>
+
+<span class="token comment"># You can even change the TYPE (Python is dynamically typed)</span>
+client_revenue <span class="token operator">=</span> <span class="token string">"seventy-five thousand"</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>client_revenue<span class="token punctuation">)</span>        <span class="token comment"># Output: seventy-five thousand</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>client_revenue<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># &lt;class 'str'&gt;</span>
+</code></pre><p><strong>Mike:</strong> "In Python, variables don't have fixed types. You can reassign a variable to hold a completely different type of data. This is called <strong>dynamic typing</strong>."</p>
+<blockquote>
+<p>💡 <strong>Key Insight:</strong> The <code>=</code> sign in Python is NOT the same as <code>=</code> in math. In math, <code>x = 5</code> means "x <em>equals</em> 5." In Python, it means "<strong>store</strong> the value 5 into the variable named x."</p>
+</blockquote>
+<h4 id="multiple-assignment">Multiple Assignment </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Assign multiple variables in one line</span>
+revenue<span class="token punctuation">,</span> expenses<span class="token punctuation">,</span> profit <span class="token operator">=</span> <span class="token number">100000</span><span class="token punctuation">,</span> <span class="token number">65000</span><span class="token punctuation">,</span> <span class="token number">35000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>revenue<span class="token punctuation">)</span>    <span class="token comment"># 100000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>expenses<span class="token punctuation">)</span>   <span class="token comment"># 65000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>profit<span class="token punctuation">)</span>     <span class="token comment"># 35000</span>
+
+<span class="token comment"># Assign the same value to multiple variables</span>
+case_a <span class="token operator">=</span> case_b <span class="token operator">=</span> case_c <span class="token operator">=</span> <span class="token string">"pending"</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>case_a<span class="token punctuation">)</span>     <span class="token comment"># pending</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>case_b<span class="token punctuation">)</span>     <span class="token comment"># pending</span>
+</code></pre><hr>
+<h3 id="35-arithmetic-operations">3.5 Arithmetic Operations </h3>
+<p><strong>Mike:</strong> "Now the fun part. Python is a <strong>powerful calculator</strong>. Here are all the arithmetic operators:"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>a <span class="token operator">=</span> <span class="token number">20</span>
+b <span class="token operator">=</span> <span class="token number">6</span>
+
+<span class="token comment"># Addition</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span>      <span class="token comment"># 26</span>
+
+<span class="token comment"># Subtraction</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">-</span> b<span class="token punctuation">)</span>      <span class="token comment"># 14</span>
+
+<span class="token comment"># Multiplication</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">*</span> b<span class="token punctuation">)</span>      <span class="token comment"># 120</span>
+
+<span class="token comment"># Division (always returns a float!)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">/</span> b<span class="token punctuation">)</span>      <span class="token comment"># 3.3333333333333335</span>
+
+<span class="token comment"># Floor Division (rounds DOWN to nearest integer)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">//</span> b<span class="token punctuation">)</span>     <span class="token comment"># 3</span>
+
+<span class="token comment"># Modulus (the remainder after division)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">%</span> b<span class="token punctuation">)</span>      <span class="token comment"># 2</span>
+
+<span class="token comment"># Exponentiation (power)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">**</span> b<span class="token punctuation">)</span>     <span class="token comment"># 64000000  (20 to the power of 6)</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Addition</td>
+<td><code>20 + 6</code></td>
+<td><code>26</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtraction</td>
+<td><code>20 - 6</code></td>
+<td><code>14</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplication</td>
+<td><code>20 * 6</code></td>
+<td><code>120</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Division</td>
+<td><code>20 / 6</code></td>
+<td><code>3.333...</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>Floor Division</td>
+<td><code>20 // 6</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulus</td>
+<td><code>20 % 6</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Exponentiation</td>
+<td><code>2 ** 10</code></td>
+<td><code>1024</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mike:</strong> "Pay special attention to these three:"</p>
+<h4 id="-division-always-returns-a-float">🔹 Division Always Returns a Float </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>     <span class="token comment"># 5.0 (NOT 5!)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &lt;class 'float'&gt;</span>
+</code></pre><p><strong>Mike:</strong> "Even when the result is a whole number, <code>/</code> gives you a float. If you need an integer, use <code>//</code>."</p>
+<h4 id="-floor-division-rounds-down-not-toward-zero">🔹 Floor Division Rounds DOWN (Not Toward Zero) </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">7</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">)</span>     <span class="token comment"># 3  (rounds down)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">7</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">)</span>    <span class="token comment"># -4 (rounds DOWN, not toward zero!)</span>
+</code></pre><p><strong>Mike:</strong> "This catches people all the time. With negative numbers, floor division rounds toward <em>negative infinity</em>, not toward zero."</p>
+<h4 id="-modulus-gives-you-the-remainder">🔹 Modulus Gives You the Remainder </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">17</span> <span class="token operator">%</span> <span class="token number">5</span><span class="token punctuation">)</span>     <span class="token comment"># 2 (because 17 = 5*3 + 2)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">20</span> <span class="token operator">%</span> <span class="token number">4</span><span class="token punctuation">)</span>     <span class="token comment"># 0 (perfectly divisible — no remainder)</span>
+</code></pre><p><strong>Mike:</strong> "Modulus is incredibly useful. You can use it to check if a number is even or odd, cycle through values, and much more."</p>
+<hr>
+<h3 id="36-augmented-assignment-operators">3.6 Augmented Assignment Operators </h3>
+<p><strong>Mike:</strong> "When you want to update a variable based on its current value, Python has shorthand:"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>revenue <span class="token operator">=</span> <span class="token number">100000</span>
+
+<span class="token comment"># These two lines do the exact same thing:</span>
+revenue <span class="token operator">=</span> revenue <span class="token operator">+</span> <span class="token number">5000</span>
+revenue <span class="token operator">+=</span> <span class="token number">5000</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>revenue<span class="token punctuation">)</span>  <span class="token comment"># 110000</span>
+</code></pre><p>All augmented assignment operators:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">50</span>
+x <span class="token operator">+=</span> <span class="token number">10</span>    <span class="token comment"># x = x + 10  → 60</span>
+x <span class="token operator">-=</span> <span class="token number">5</span>     <span class="token comment"># x = x - 5   → 55</span>
+x <span class="token operator">*=</span> <span class="token number">2</span>     <span class="token comment"># x = x * 2   → 110</span>
+x <span class="token operator">/=</span> <span class="token number">4</span>     <span class="token comment"># x = x / 4   → 27.5</span>
+x <span class="token operator">//=</span> <span class="token number">3</span>    <span class="token comment"># x = x // 3  → 9.0</span>
+x <span class="token operator">**=</span> <span class="token number">2</span>    <span class="token comment"># x = x ** 2  → 81.0</span>
+x <span class="token operator">%=</span> <span class="token number">7</span>     <span class="token comment"># x = x % 7   → 4.0</span>
+</code></pre><hr>
+<h3 id="37-operator-precedence-order-of-operations">3.7 Operator Precedence (Order of Operations) </h3>
+<p><strong>Mike:</strong> "Python follows mathematical order of operations — <strong>PEMDAS</strong>:"</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Priority (high to low):
+1. () — Parentheses
+2. ** — Exponentiation
+3. *, /, //, % — Multiplication, Division, Floor Div, Modulus
+4. +, - — Addition, Subtraction
+</code></pre><pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Without parentheses</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">4</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>     <span class="token comment"># 14 (multiplication first: 3*4=12, then 2+12=14)</span>
+
+<span class="token comment"># With parentheses — YOU control the order</span>
+result <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">4</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>     <span class="token comment"># 20 (parentheses first: 2+3=5, then 5*4=20)</span>
+
+<span class="token comment"># Exponentiation has higher precedence than multiplication</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">**</span> <span class="token number">2</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>     <span class="token comment"># 18 (exponent first: 3**2=9, then 2*9=18)</span>
+</code></pre><p><strong>Mike:</strong> "My rule: <strong>when in doubt, use parentheses</strong>. They make your code easier to read AND guarantee the order you want."</p>
+<hr>
+<h3 id="38-type-conversion-casting">3.8 Type Conversion (Casting) </h3>
+<p><strong>Mike:</strong> "Sometimes you need to convert between number types:"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Float to Integer (truncates — doesn't round!)</span>
+price <span class="token operator">=</span> <span class="token number">49.99</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>price<span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># 49 (decimal part is CHOPPED OFF)</span>
+
+<span class="token comment"># Integer to Float</span>
+count <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">float</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 10.0</span>
+
+<span class="token comment"># String to Integer</span>
+user_input <span class="token operator">=</span> <span class="token string">"42"</span>
+number <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>user_input<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>number <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">)</span>      <span class="token comment"># 50</span>
+
+<span class="token comment"># String to Float</span>
+rate <span class="token operator">=</span> <span class="token string">"3.14"</span>
+pi <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>rate<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pi <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>          <span class="token comment"># 6.28</span>
+
+<span class="token comment"># Number to String</span>
+age <span class="token operator">=</span> <span class="token number">25</span>
+message <span class="token operator">=</span> <span class="token string">"I am "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" years old"</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span>         <span class="token comment"># I am 25 years old</span>
+</code></pre><blockquote>
+<p>⚠️ <strong>Critical:</strong> <code>int()</code> does NOT round — it <strong>truncates</strong> (cuts off the decimal). <code>int(9.9)</code> is <code>9</code>, not <code>10</code>. If you want rounding, use <code>round()</code>.</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">9.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># 9  — truncated</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">9.9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 10 — rounded</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">9.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 10 — rounds to nearest even (banker's rounding)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">8.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 8  — rounds to nearest even!</span>
+</code></pre><hr>
+<h3 id="39-useful-built-in-functions-for-numbers">3.9 Useful Built-in Functions for Numbers </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Absolute value</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span>          <span class="token comment"># 42</span>
+
+<span class="token comment"># Rounding</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.14159</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 3.14 (round to 2 decimal places)</span>
+
+<span class="token comment"># Min and Max</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 5</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 20</span>
+
+<span class="token comment"># Power (same as **)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>        <span class="token comment"># 1024</span>
+
+<span class="token comment"># Divmod — returns quotient AND remainder together</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">divmod</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># (3, 2) → 17 = 5*3 + 2</span>
+</code></pre><hr>
+<h3 id="310-solving-harveys-problem">3.10 Solving Harvey's Problem </h3>
+<p><strong>Mike:</strong> "Now let's put it all together and solve Harvey's actual problem — calculate profit margins for clients."</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># ============================================</span>
+<span class="token comment"># Pearson Specter Litt — Client Profitability</span>
+<span class="token comment"># ============================================</span>
+
+<span class="token comment"># Client data: revenue earned vs costs incurred</span>
+client_a_revenue <span class="token operator">=</span> <span class="token number">250000</span>
+client_a_costs <span class="token operator">=</span> <span class="token number">180000</span>
+
+client_b_revenue <span class="token operator">=</span> <span class="token number">120000</span>
+client_b_costs <span class="token operator">=</span> <span class="token number">95000</span>
+
+client_c_revenue <span class="token operator">=</span> <span class="token number">500000</span>
+client_c_costs <span class="token operator">=</span> <span class="token number">620000</span>   <span class="token comment"># This client is LOSING money</span>
+
+<span class="token comment"># Calculate profit for each client</span>
+profit_a <span class="token operator">=</span> client_a_revenue <span class="token operator">-</span> client_a_costs
+profit_b <span class="token operator">=</span> client_b_revenue <span class="token operator">-</span> client_b_costs
+profit_c <span class="token operator">=</span> client_c_revenue <span class="token operator">-</span> client_c_costs
+
+<span class="token comment"># Calculate profit margin (as a percentage)</span>
+margin_a <span class="token operator">=</span> <span class="token punctuation">(</span>profit_a <span class="token operator">/</span> client_a_revenue<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+margin_b <span class="token operator">=</span> <span class="token punctuation">(</span>profit_b <span class="token operator">/</span> client_b_revenue<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+margin_c <span class="token operator">=</span> <span class="token punctuation">(</span>profit_c <span class="token operator">/</span> client_c_revenue<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span>
+
+<span class="token comment"># Display results</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"=== Client Profitability Report ==="</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Client A:"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Revenue:       $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_a_revenue<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Costs:         $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_a_costs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit:        $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>profit_a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit Margin: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>margin_a<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Client B:"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Revenue:       $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_b_revenue<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Costs:         $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_b_costs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit:        $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>profit_b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit Margin: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>margin_b<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Client C:"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Revenue:       $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_c_revenue<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Costs:         $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>client_c_costs<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit:        $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>profit_c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"  Profit Margin: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>margin_c<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Determine which client is most/least profitable</span>
+best_margin <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>margin_a<span class="token punctuation">,</span> margin_b<span class="token punctuation">,</span> margin_c<span class="token punctuation">)</span>
+worst_margin <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>margin_a<span class="token punctuation">,</span> margin_b<span class="token punctuation">,</span> margin_c<span class="token punctuation">)</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Most profitable margin:  "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>best_margin<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Least profitable margin: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>worst_margin<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span>
+</code></pre><p><strong>Expected Output:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>=== Client Profitability Report ===
+
+Client A:
+  Revenue:       $250000
+  Costs:         $180000
+  Profit:        $70000
+  Profit Margin: 28.0%
+
+Client B:
+  Revenue:       $120000
+  Costs:         $95000
+  Profit:        $25000
+  Profit Margin: 20.83%
+
+Client C:
+  Revenue:       $500000
+  Costs:         $620000
+  Profit:        $-120000
+  Profit Margin: -24.0%
+
+Most profitable margin:  28.0%
+Least profitable margin: -24.0%
+</code></pre><hr>
+<h2 id="4--edge-cases--pitfalls--louis-litt">4. ⚡ Edge Cases &amp; Pitfalls — Louis Litt </h2>
+<p><em>The door bursts open. Louis Litt walks in, holding a coffee mug that reads "WORLD'S BEST MANAGING PARTNER."</em></p>
+<p><strong>Louis:</strong> "Oh, so we're teaching the new associate Python? Let me tell you something — I've seen plenty of so-called 'coders' crash and burn because they don't understand the <em>gotchas</em>. Let me stress-test what Mike just taught you."</p>
+<hr>
+<h3 id="pitfall-1-floating-point-precision-">Pitfall 1: Floating-Point Precision 🔥 </h3>
+<p><strong>Louis:</strong> "Try this. Tell me the answer."</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+</code></pre><p><em>You type it. The screen shows:</em></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>0.30000000000000004
+</code></pre><p><strong>Louis:</strong> "SURPRISE! <code>0.1 + 0.2</code> is NOT <code>0.3</code> in Python. Welcome to the real world."</p>
+<p><strong>Louis:</strong> "Computers store numbers in <strong>binary</strong> (base 2). Some decimal fractions — like 0.1 — <em>cannot be represented exactly</em> in binary. It's like trying to write 1/3 as a decimal: 0.33333… It never ends."</p>
+<p><strong>Louis:</strong> "So how do you handle money and precision-critical calculations?"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># BAD — never compare floats directly</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span> <span class="token operator">==</span> <span class="token number">0.3</span><span class="token punctuation">)</span>         <span class="token comment"># False!</span>
+
+<span class="token comment"># GOOD — use a tolerance (epsilon)</span>
+result <span class="token operator">=</span> <span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">abs</span><span class="token punctuation">(</span>result <span class="token operator">-</span> <span class="token number">0.3</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">1e-9</span><span class="token punctuation">)</span> <span class="token comment"># True</span>
+
+<span class="token comment"># BEST — use the decimal module for financial calculations</span>
+<span class="token keyword keyword-from">from</span> decimal <span class="token keyword keyword-import">import</span> Decimal
+a <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token string">'0.1'</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token string">'0.2'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span>                     <span class="token comment"># 0.3 (exact!)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b <span class="token operator">==</span> Decimal<span class="token punctuation">(</span><span class="token string">'0.3'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># True</span>
+</code></pre><blockquote>
+<p>🚨 <strong>Louis's Rule #1:</strong> "NEVER use floats for money. Use the <code>decimal</code> module or work in cents (integers)."</p>
+</blockquote>
+<hr>
+<h3 id="pitfall-2-integer-division-surprise">Pitfall 2: Integer Division Surprise </h3>
+<p><strong>Louis:</strong> "Quick — what's the type of this?"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>result <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">/</span> <span class="token number">5</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>       <span class="token comment"># 2.0 — NOT 2!</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &lt;class 'float'&gt;</span>
+</code></pre><p><strong>Louis:</strong> "The <code>/</code> operator ALWAYS returns a float, even when dividing evenly. If you need an integer, you must explicitly use <code>//</code> or <code>int()</code>."</p>
+<hr>
+<h3 id="pitfall-3-division-by-zero">Pitfall 3: Division by Zero </h3>
+<p><strong>Louis:</strong> "What happens when you divide by zero?"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">)</span>   <span class="token comment"># ZeroDivisionError: division by zero</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">//</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment"># ZeroDivisionError: integer division or modulo by zero</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">%</span> <span class="token number">0</span><span class="token punctuation">)</span>   <span class="token comment"># ZeroDivisionError: integer division or modulo by zero</span>
+</code></pre><p><strong>Louis:</strong> "Your program <strong>crashes</strong>. No warning, no mercy. In Level 3, you'll learn <code>try-except</code> to handle this. For now, just know: <strong>always validate your divisor.</strong>"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Safe division pattern</span>
+divisor <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword keyword-if">if</span> divisor <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">/</span> divisor
+<span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Warning: Cannot divide by zero!"</span><span class="token punctuation">)</span>
+</code></pre><hr>
+<h3 id="pitfall-4-chained-assignment-confusion">Pitfall 4: Chained Assignment Confusion </h3>
+<p><strong>Louis:</strong> "What does <code>x = y = 5</code> actually do? Does it chain left-to-right or right-to-left?"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> y <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>  <span class="token comment"># 5</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>  <span class="token comment"># 5</span>
+
+<span class="token comment"># They BOTH point to the same value in memory</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># True</span>
+</code></pre><p><strong>Louis:</strong> "For integers and floats this is harmless. But when you get to <em>mutable</em> objects in Level 2, this distinction will <em>haunt</em> you."</p>
+<hr>
+<h3 id="pitfall-5-large-numbers-and-underscores">Pitfall 5: Large Numbers and Underscores </h3>
+<p><strong>Louis:</strong> "Can Python handle obscenely large numbers?"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Python handles arbitrarily large integers!</span>
+big_number <span class="token operator">=</span> <span class="token number">999999999999999999999999999999999999</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>big_number <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 1000000000000000000000000000000000000</span>
+
+<span class="token comment"># Use underscores for readability (Python 3.6+)</span>
+firm_revenue <span class="token operator">=</span> <span class="token number">1_000_000_000</span>  <span class="token comment"># Same as 1000000000</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>firm_revenue<span class="token punctuation">)</span>           <span class="token comment"># 1000000000</span>
+</code></pre><p><strong>Louis:</strong> "Python integers have <strong>unlimited precision</strong>. There's no overflow like in C or Java. However, floats are limited to about 15-17 significant digits."</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Float precision limit</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token number">123456789.123456789</span><span class="token punctuation">)</span>  <span class="token comment"># 123456789.12345679 — precision lost!</span>
+</code></pre><hr>
+<h3 id="pitfall-6-the-walrus-operator--python-38">Pitfall 6: The Walrus Operator <code>:=</code> (Python 3.8+) </h3>
+<p><strong>Louis:</strong> "Since we're being thorough, know that Python 3.8 introduced the <strong>walrus operator</strong> — assignment inside expressions:"</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Without walrus — calculates twice</span>
+<span class="token keyword keyword-import">import</span> math
+value <span class="token operator">=</span> <span class="token number">225</span>
+<span class="token keyword keyword-if">if</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Calculated TWICE</span>
+
+<span class="token comment"># With walrus — calculates once and assigns</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>root <span class="token operator">:=</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span>               <span class="token comment"># Calculated ONCE, reused</span>
+</code></pre><p><strong>Louis:</strong> "You won't need this today, but knowing it exists puts you ahead."</p>
+<hr>
+<h2 id="5--mental-model--donna-paulsen">5. 🧠 Mental Model — Donna Paulsen </h2>
+<p><em>Donna appears at the doorway, arms crossed, looking amused.</em></p>
+<p><strong>Donna:</strong> "Boys, you've overwhelmed the rookie. Let me simplify this."</p>
+<hr>
+<h3 id="️-analogy-variables-are-labeled-boxes">🏷️ Analogy: Variables Are Labeled Boxes </h3>
+<p><strong>Donna:</strong> "Imagine a storage room in the firm. You have boxes on shelves."</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>📦 [client_name]      → contains: "Pearson Specter Litt"
+📦 [billable_hours]    → contains: 120
+📦 [hourly_rate]       → contains: 450.75
+</code></pre><p><strong>Donna:</strong> "A <strong>variable</strong> is a <strong>labeled box</strong>. The label is the <strong>name</strong>, and what's inside is the <strong>value</strong>."</p>
+<ul>
+<li><strong>Creating a variable</strong> = Getting a new box, putting a label on it, and placing something inside</li>
+<li><strong>Reassigning</strong> = Opening the box, throwing away what's inside, and putting something new in</li>
+<li><strong>Reading a variable</strong> = Looking inside the box to see what's there</li>
+</ul>
+<p><strong>Donna:</strong> "Numbers come in two flavors — think of it like this:"</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Real-World Analogy</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code> (Integer)</td>
+<td>Counting on your fingers — whole, exact</td>
+<td>Number of clients: <code>47</code></td>
+</tr>
+<tr>
+<td><code>float</code> (Floating-point)</td>
+<td>Reading a thermometer — precise, with decimals</td>
+<td>Temperature: <code>98.6</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Donna:</strong> "And arithmetic? It's just math you already know. Python is the world's most expensive calculator— but it works <em>exactly</em> like the one you had in school."</p>
+<p><strong>Donna:</strong> "One last thing. When Louis tells you that <code>0.1 + 0.2 ≠ 0.3</code>, think about it like this: imagine trying to cut a pizza into <em>exactly</em> three equal slices. You can't. There's always a tiny, invisible sliver left over. That's floating-point math. The sliver is real, but it's so small it almost never matters — unless you're counting <em>money</em>."</p>
+<p><em>She looks at Louis.</em></p>
+<p><strong>Donna:</strong> "See? Not that complicated."</p>
+<p><em>Louis mutters something under his breath.</em></p>
+<hr>
+<h2 id="6--practice-exercises--rachel-zane">6. 💪 Practice Exercises — Rachel Zane </h2>
+<p><em>Rachel walks in with a notepad.</em></p>
+<p><strong>Rachel:</strong> "Great lesson. But knowing isn't doing. Here are your exercises. Complete all three levels before you leave today."</p>
+<hr>
+<h3 id="-beginner-exercises">🟢 Beginner Exercises </h3>
+<p><strong>Exercise 1: Variable Basics</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Create variables to store the following information about a legal case:
+- Case number (integer): 2024001
+- Client name (string): "Wayne Enterprises"
+- Settlement amount (float): 2500000.50
+- Case is active (boolean): True
+
+Print each variable and its type.
+</code></pre><p><strong>Exercise 2: Simple Arithmetic</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A client was billed for 85 hours at a rate of $375.00 per hour.
+- Calculate the total billing amount
+- Calculate the tax (8.5%)
+- Calculate the total with tax
+- Print all three values
+</code></pre><p><strong>Exercise 3: Temperature Converter</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Convert a temperature from Fahrenheit to Celsius.
+Formula: celsius = (fahrenheit - 32) * 5 / 9
+
+Test with: 98.6°F → should output 37.0°C
+</code></pre><hr>
+<h3 id="-intermediate-exercises">🟡 Intermediate Exercises </h3>
+<p><strong>Exercise 4: Profit Calculator</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>The firm handled 3 cases this quarter:
+- Case 1: Revenue $150,000 | Cost $95,000
+- Case 2: Revenue $280,000 | Cost $310,000
+- Case 3: Revenue $420,000 | Cost $275,000
+
+Calculate:
+a) Profit for each case
+b) Total profit for the quarter
+c) Average profit per case
+d) The profit margin percentage for each case
+e) Which case had the highest profit margin?
+</code></pre><p><strong>Exercise 5: Time Calculator</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>An associate worked 14,350 minutes this month.
+Convert this into:
+- Total hours and remaining minutes (use // and %)
+- Total days, remaining hours, and remaining minutes
+Display the result in the format: "X days, Y hours, Z minutes"
+</code></pre><p><strong>Exercise 6: Compound Interest</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>The firm invests $500,000 in a trust fund at 6.5% annual interest,
+compounded annually.
+
+Formula: A = P * (1 + r) ** t
+
+Calculate the value after 1, 5, 10, and 20 years.
+Calculate how much interest was earned in each case.
+</code></pre><hr>
+<h3 id="-advanced-exercises">🔴 Advanced Exercises </h3>
+<p><strong>Exercise 7: Digit Extractor</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Given the number 83,472:
+- Extract each digit using only arithmetic operations (%, //, no strings!)
+- Print each digit on a separate line, from left to right.
+
+Hint: Use combinations of // and % with powers of 10.
+</code></pre><p><strong>Exercise 8: Number System Converter</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Take a decimal number (e.g., 156) and convert it to:
+- Binary representation (use bin())
+- Octal representation (use oct())  
+- Hexadecimal representation (use hex())
+
+Also, convert the binary string '10110101' back to decimal (use int() with base).
+</code></pre><p><strong>Exercise 9: Payroll Calculator</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Build a complete payroll calculator for the firm:
+
+Associate data:
+- Base salary: $185,000/year
+- Bonus percentage: 15%
+- Federal tax rate: 24%
+- State tax rate: 6.85%
+- 401k contribution: 6%
+- Health insurance (monthly): $450
+
+Calculate:
+a) Annual gross pay (salary + bonus)
+b) Annual deductions (federal tax, state tax, 401k, health insurance)
+c) Annual net pay
+d) Monthly net pay
+e) Effective tax rate (total deductions / gross pay * 100)
+f) Display a formatted payroll summary
+</code></pre><hr>
+<h2 id="7--debugging-scenario">7. 🐛 Debugging Scenario </h2>
+<p><em>Mike slides his laptop over to you.</em></p>
+<p><strong>Mike:</strong> "Before you go, one more thing. You need to learn to <strong>debug</strong>. Here's a script I wrote at 3 AM. It has bugs. Find them."</p>
+<h3 id="buggy-code-">Buggy Code 🐛 </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Bug Hunt: Client Billing Calculator</span>
+<span class="token comment"># Find and fix ALL the bugs!</span>
+
+hourly_rate <span class="token operator">=</span> <span class="token number">375</span>
+hours_worked <span class="token operator">=</span> <span class="token string">"40"</span>         <span class="token comment"># Bug 1: Why might this be a problem?</span>
+tax rate <span class="token operator">=</span> <span class="token number">8.5</span>              <span class="token comment"># Bug 2: What's wrong with this variable name?</span>
+
+<span class="token comment"># Calculate total billing</span>
+total <span class="token operator">=</span> hourly_rate <span class="token operator">*</span> hours_worked    <span class="token comment"># Bug 3: What happens here?</span>
+
+<span class="token comment"># Apply discount for loyal clients</span>
+discount_percent <span class="token operator">=</span> <span class="token number">10</span>
+discounted_total <span class="token operator">=</span> total <span class="token operator">-</span> total <span class="token operator">*</span> discount_percent   <span class="token comment"># Bug 4: Is this the right formula?</span>
+
+<span class="token comment"># Calculate tax</span>
+tax_amount <span class="token operator">=</span> discounted_total <span class="token operator">*</span> tax rate <span class="token operator">/</span> <span class="token number">100</span>        <span class="token comment"># Bug 5: Syntax issue</span>
+
+<span class="token comment"># Final amount</span>
+final <span class="token operator">=</span> discounted_total <span class="token operator">+</span> tax_amount
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Billing Summary"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Rate: $"</span> hourly_rate<span class="token punctuation">)</span>          <span class="token comment"># Bug 6: Missing something?</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Total: $"</span> <span class="token operator">+</span> total<span class="token punctuation">)</span>             <span class="token comment"># Bug 7: Can you concatenate like this?</span>
+</code></pre><hr>
+<h3 id="fixed-code-">Fixed Code ✅ </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Fixed: Client Billing Calculator</span>
+
+hourly_rate <span class="token operator">=</span> <span class="token number">375</span>
+hours_worked <span class="token operator">=</span> <span class="token number">40</span>                     <span class="token comment"># Fix 1: Changed from string "40" to integer 40</span>
+
+tax_rate <span class="token operator">=</span> <span class="token number">8.5</span>                        <span class="token comment"># Fix 2: Replaced space with underscore</span>
+
+<span class="token comment"># Calculate total billing</span>
+total <span class="token operator">=</span> hourly_rate <span class="token operator">*</span> hours_worked    <span class="token comment"># Fix 3: Now both are numbers, multiplication works</span>
+
+<span class="token comment"># Apply discount for loyal clients  </span>
+discount_percent <span class="token operator">=</span> <span class="token number">10</span>
+discounted_total <span class="token operator">=</span> total <span class="token operator">-</span> total <span class="token operator">*</span> <span class="token punctuation">(</span>discount_percent <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment"># Fix 4: Convert percent properly</span>
+
+<span class="token comment"># Calculate tax</span>
+tax_amount <span class="token operator">=</span> discounted_total <span class="token operator">*</span> tax_rate <span class="token operator">/</span> <span class="token number">100</span>               <span class="token comment"># Fix 5: Variable name is now valid</span>
+
+<span class="token comment"># Final amount</span>
+final <span class="token operator">=</span> discounted_total <span class="token operator">+</span> tax_amount
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Billing Summary"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Rate: $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>hourly_rate<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># Fix 6: Added + for concatenation</span>
+                                        <span class="token comment">#         AND str() to convert int to string</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Total: $"</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>final<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token comment"># Fix 7: Used str() to convert float to string</span>
+</code></pre><h3 id="bug-summary">Bug Summary </h3>
+<table>
+<thead>
+<tr>
+<th>Bug #</th>
+<th>Issue</th>
+<th>Concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>"40"</code> is a string, not an integer</td>
+<td>Data types matter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Space in variable name <code>tax rate</code></td>
+<td>Variable naming rules</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Can't multiply string × int meaningfully</td>
+<td>Type errors</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>discount_percent</code> used as whole number, not percentage</td>
+<td>Math logic</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Invalid variable name breaks syntax</td>
+<td>Naming rules</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Missing <code>+</code> operator and <code>str()</code> conversion</td>
+<td>String concatenation</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Can't concatenate <code>str</code> + <code>float/int</code> directly</td>
+<td>Type conversion</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8--real-world-application">8. 🌍 Real-World Application </h2>
+<p><em>Harvey returns to his office.</em></p>
+<p><strong>Harvey:</strong> "Good. You learned the basics. Now let me tell you where this matters in the real world — because everything we do here applies outside this firm."</p>
+<h3 id="where-variables--numbers-are-used-in-production-software">Where Variables &amp; Numbers Are Used in Production Software: </h3>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finance</strong></td>
+<td>Calculating interest rates, portfolio values, risk metrics</td>
+</tr>
+<tr>
+<td><strong>E-Commerce</strong></td>
+<td>Shopping cart totals, discount calculations, tax computation</td>
+</tr>
+<tr>
+<td><strong>Data Science</strong></td>
+<td>Statistical analysis, feature engineering, data normalization</td>
+</tr>
+<tr>
+<td><strong>Game Development</strong></td>
+<td>Player scores, health points, physics calculations</td>
+</tr>
+<tr>
+<td><strong>DevOps</strong></td>
+<td>Server metrics, uptime percentages, resource thresholds</td>
+</tr>
+<tr>
+<td><strong>Machine Learning</strong></td>
+<td>Model weights, learning rates, loss calculations</td>
+</tr>
+<tr>
+<td><strong>Web Development</strong></td>
+<td>Pagination math, API rate limiting, session timeouts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="real-production-example-api-rate-limiter">Real Production Example: API Rate Limiter </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># A simplified rate limiter — used in every major web application</span>
+max_requests_per_minute <span class="token operator">=</span> <span class="token number">100</span>
+current_requests <span class="token operator">=</span> <span class="token number">73</span>
+time_remaining_seconds <span class="token operator">=</span> <span class="token number">22</span>
+
+<span class="token comment"># Calculate available request budget</span>
+remaining_requests <span class="token operator">=</span> max_requests_per_minute <span class="token operator">-</span> current_requests
+requests_per_second <span class="token operator">=</span> remaining_requests <span class="token operator">/</span> time_remaining_seconds
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Remaining requests: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>remaining_requests<span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># 27</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"Safe rate: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>requests_per_second<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" req/sec"</span><span class="token punctuation">)</span>  <span class="token comment"># ~1.23 req/sec</span>
+</code></pre><p><strong>Harvey:</strong> "Every startup, every enterprise, every system in the world — they all started with someone storing a number in a variable. Don't underestimate the fundamentals."</p>
+<hr>
+<h2 id="9--knowledge-check">9. ✅ Knowledge Check </h2>
+<p><em>Harvey stands up.</em></p>
+<p><strong>Harvey:</strong> "Before you leave this office, answer these questions. Get them wrong, and we're starting over tomorrow."</p>
+<hr>
+<p><strong>Q1.</strong> What is the difference between <code>/</code> and <code>//</code> in Python? Give an example where they produce different results.</p>
+<p><strong>Q2.</strong> What will <code>print(type(10 / 2))</code> output? Why?</p>
+<p><strong>Q3.</strong> Why does <code>0.1 + 0.2 != 0.3</code> in Python? How would you fix this for a financial application?</p>
+<p><strong>Q4.</strong> What is wrong with this variable name: <code>2nd_client = "Acme Corp"</code>?</p>
+<p><strong>Q5.</strong> What does the <code>%</code> (modulus) operator do? How would you use it to check if a number is even?</p>
+<p><strong>Q6.</strong> What is the output of this code?</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token number">10</span>
+x <span class="token operator">+=</span> <span class="token number">5</span>
+x <span class="token operator">*=</span> <span class="token number">2</span>
+x <span class="token operator">//=</span> <span class="token number">3</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+</code></pre><p><strong>Q7.</strong> Explain the difference between <code>int(9.8)</code> and <code>round(9.8)</code>. What does each return?</p>
+<p><strong>Q8.</strong> What is the output of <code>-7 // 2</code>? Why isn't it <code>-3</code>?</p>
+<p><strong>Q9.</strong> How do you write the number <code>one million</code> in Python so it's readable?</p>
+<p><strong>Q10.</strong> Write a single line of Python that calculates the area of a circle with radius 7. (Area = π × r²)</p>
+<hr>
+<h3 id="-answer-key">📋 Answer Key </h3>
+<blockquote>
+<p><strong>Q1.</strong> <code>/</code> is true division (always returns float). <code>//</code> is floor division (rounds toward negative infinity). Example: <code>7/2 = 3.5</code> but <code>7//2 = 3</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q2.</strong> <code>&lt;class 'float'&gt;</code> — because <code>/</code> always returns a float, even for <code>10/2 = 5.0</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q3.</strong> Binary can't represent 0.1 exactly. Fix: use <code>from decimal import Decimal</code> and <code>Decimal('0.1') + Decimal('0.2')</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q4.</strong> Variable names cannot start with a digit. Use <code>second_client</code> instead.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q5.</strong> <code>%</code> returns the remainder of division. Even check: <code>number % 2 == 0</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q6.</strong> <code>10 → 15 → 30 → 10</code> (30 // 3 = 10). Output: <code>10</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q7.</strong> <code>int(9.8)</code> = <code>9</code> (truncates). <code>round(9.8)</code> = <code>10</code> (rounds).</p>
+</blockquote>
+<blockquote>
+<p><strong>Q8.</strong> <code>-4</code>. Floor division rounds toward <em>negative infinity</em>, not zero. -3.5 rounds down to -4.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q9.</strong> <code>1_000_000</code> — underscores for readability.</p>
+</blockquote>
+<blockquote>
+<p><strong>Q10.</strong> <code>area = 3.14159 * 7 ** 2</code> (or <code>import math; area = math.pi * 7 ** 2</code>).</p>
+</blockquote>
+<hr>
+<h2 id="-end-of-lesson-scene">🎬 End of Lesson Scene </h2>
+<p><em>It's 5:02 PM. You close your laptop. Harvey looks at his watch.</em></p>
+<p><strong>Harvey:</strong> "Not bad for day one."</p>
+<p><strong>Mike:</strong> "You picked it up fast. Tomorrow we tackle strings — and trust me, text manipulation is where things get <em>really</em> interesting."</p>
+<p><strong>Donna:</strong> <em>(from outside)</em> "I already scheduled your desk for 8 AM. Don't be late."</p>
+<p><strong>Louis:</strong> <em>(walking past)</em> "And don't forget about floating-point precision. I'll be quizzing you."</p>
+<p><em>You walk toward the elevator, laptop bag over your shoulder. The city lights of Manhattan shimmer through the windows. Day one: complete.</em></p>
+<hr>
+<h2 id="-concepts-mastered-in-this-lesson">📌 Concepts Mastered in This Lesson </h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Variables — creation, naming, reassignment</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data types — <code>int</code>, <code>float</code>, <code>type()</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Arithmetic operators — <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Augmented assignment — <code>+=</code>, <code>-=</code>, <code>*=</code>, etc.</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Operator precedence — PEMDAS</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Type conversion — <code>int()</code>, <code>float()</code>, <code>str()</code>, <code>round()</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Built-in functions — <code>abs()</code>, <code>min()</code>, <code>max()</code>, <code>pow()</code>, <code>divmod()</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Floating-point precision &amp; <code>Decimal</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Variable naming rules and conventions</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Debugging type-related errors</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><strong>Next Lesson →</strong> Level 1, Lesson 2: <em>Working with Strings and Output</em><br>
+<em>Harvey needs you to generate formatted legal documents using Python string methods…</em></p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

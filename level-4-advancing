@@ -1,0 +1,21 @@
+Level 4: Advancing
+Create and Use Decorators in Python
+Create and apply custom decorators to modify function behavior.
+Use Closures and Understand Scoping Rules in Python
+Use closures and understand lexical scoping in nested functions, and understand variable scope and name resolution (LEGB rule) to write code that avoids scope-related errors.
+Use Inheritance to Extend Python Classes
+Implement inheritance in a class to create specialized classes.
+Use super() to Call Parent Methods in Python
+Use super() to call methods in a parent class.
+Implement Multiple Inheritance in Python
+Implement multiple inheritance to combine functionality from multiple classes.
+Use slots to Create Memory-Efficient Python Classes
+Use __slots__ to create memory-efficient classes.
+Create Iterators with iter and next in Python
+Create a custom iterable class using __iter__ and __next__, and use Python’s iterator protocol explicitly to create custom iterators.
+Use Regex in Python to Match Patterns and Extract Text
+Use regular expressions for simple pattern matching. Use the re module to match patterns in strings. Extract substrings from text using regular expressions.
+Use SQLAlchemy or Another Python ORM
+Interact with databases using SQLAlchemy or a similar ORM.
+Compare Python Implementations (e.g., CPython, PyPy)
+Identify the differences between various Python implementations, such as CPython, PyPy, IronPython, and Jython.

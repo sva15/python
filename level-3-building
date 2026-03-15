@@ -1,0 +1,26 @@
+Level 3: Building
+
+Create Generator Functions in Python
+Create generator functions using yield.
+Define Instance Methods in Python
+Define instance methods inside a class.
+Override Methods and Dunder Methods in Python
+Customize class behavior by overriding built-in behavior with dunder methods (e.g., __str__, __repr__), and override methods in a child class to customize behavior.
+Use @property to Define Read-Only Attributes in Python
+Use the @property decorator to create read-only attributes.
+Handle Exceptions With Try-Except in Python
+Use try-except blocks to handle exceptions gracefully. Handle specific exception types to provide targeted error handling. Use else and finally blocks in try-except structures to manage resources and cleanup.
+Use Lambda Functions in Python
+Use lambda functions for short, anonymous functions.
+Create Enums with the enum Module in Python
+Create enumerations using the enum module.
+Use Context Managers in Python
+Use a context manager to safely manage resources (e.g., file I/O).
+Create Custom Context Managers in Python
+Create custom context managers with __enter__ and __exit__ for reusable resource management.
+Use Python’s logging Module
+Use the logging module for structured logging.
+Write Unit Tests and Validate Code Behavior in Python
+Write unit tests using unittest or pytest. Use assert statements to validate code behavior. Use mocking and patching techniques in unit tests to isolate code.
+Apply Duck Typing in Python
+Apply duck typing in function and class design to create flexible and reusable code.

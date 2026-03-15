@@ -1,0 +1,20 @@
+Level 5 :Innovating
+
+Use Python Sockets for Networking
+Use sockets for basic network communication.
+Use Metaclasses to Customize Class Creation in Python
+Use metaclasses to customize class creation and behavior.
+Handle CSV or JSON Files with Python Modules
+Parse and manipulate structured data files like CSV or JSON using modules, and serialize and deserialize data using JSON.
+Work with Binary Files and Encoding in Python
+Work with binary files and handle file encoding and decoding appropriately.
+Write Multi-Threaded and Asynchronous Code in Python
+Reason about the Global Interpreter Lock (GIL) and its effect on threading, write multi-threaded code using concurrent.futures or threading, and write asynchronous code using asyncio.
+Apply Common Design Patterns in Python
+Apply common design patterns in Python (e.g., Singleton, Factory) to solve recurring problems.
+Optimize Python Code with timeit
+Optimize Python code using timeit and cProfile.
+Monitor Memory Usage in Python with memory-profiler
+Monitor memory usage using memory-profiler.
+Package and Publish a Python Library
+Package and distribute a Python library (e.g., setup.py, PyPI).
