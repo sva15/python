@@ -1,0 +1,50 @@
+# DevOps Module — Python for Infrastructure Automation
+
+## Supplemental Lessons
+These lessons cover Python concepts critical for DevOps engineering that are not covered in the core 60-lesson curriculum.
+
+### Lesson 1: Run Shell Commands with subprocess
+- `subprocess.run()`, `Popen`, capturing output
+- Error handling with `check=True`, timeouts
+- `shell=True` security, environment variables, `cwd`
+- Streaming output, piping, command pipelines
+- Automating kubectl, docker, terraform, git
+
+### Lesson 2: Navigate the File System with os, pathlib, and shutil
+- Environment variables (`os.environ`) — secrets, config
+- `pathlib.Path` — modern, cross-platform path handling
+- Directory operations — create, list, glob, walk
+- `shutil` — copy, move, archive, delete
+- `hashlib` — file checksums and integrity verification
+- Temporary files, permissions, file watching
+
+### Lesson 3: Make HTTP Requests with the requests Library
+- GET, POST, PUT, PATCH, DELETE
+- JSON parsing, query parameters, headers
+- Authentication (Bearer, Basic, API keys)
+- Error handling, timeouts, retry with backoff
+- Health checks, file downloads, sessions
+- Webhook receivers (FastAPI bonus)
+
+### Lesson 4: Parse and Generate YAML with PyYAML
+- `yaml.safe_load()` / `yaml.dump()` / `yaml.safe_load_all()`
+- Modifying YAML files, validating configs
+- Anchors and aliases, multi-document YAML
+- Environment-specific config overlays
+- Docker Compose and GitHub Actions generation
+
+### Lesson 5: Generate Configs with Jinja2 Templating
+- Variables `{{ }}`, conditionals `{% if %}`, loops `{% for %}`
+- Filters (`default`, `join`, `indent`, `tojson`)
+- File-based templates with `FileSystemLoader`
+- Template inheritance (`{% extends %}`, `{% block %}`)
+- Macros, strict mode, custom filters
+- Nginx, K8s, and multi-service config generation
+
+### Lesson 6: Build CLI Tools with Click and argparse
+- `argparse` basics — arguments, options, types, subcommands
+- `Click` decorator syntax — `@click.command`, `@click.option`
+- Command groups, colors, progress bars, prompts
+- Argument validation, custom types
+- Testing CLI tools with `CliRunner`
+- Installable CLI via `pyproject.toml` entry points
